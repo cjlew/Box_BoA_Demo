@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is an example of how Bank of America can use Box to upgrade their Loan Application Process. Using the Box Ui Elements, Bank of America clients can upload Loan Application documents directly and securely to Box. All files are stored on the Box cloud and can only be accessed by secure Login.
 
-Things you may want to cover:
+### Setup instructions
 
-* Ruby version
+Setup the packages
+```
+npm install
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Setup the rails server
+```
+rails s
+```

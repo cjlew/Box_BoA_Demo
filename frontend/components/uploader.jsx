@@ -26,7 +26,7 @@ class Uploader extends React.Component {
             <div id='box-upload'>
 
                   <ContentUploader
-                      token='h7kWO9uAQGxuvQTb4plqtoQhJe2rUEjY'
+                      token='su9j2C9CEHYVrmGJ2mSZ8wZSWZw3l2wR'
                       language='en-US'
                       messages={messages}
                       name='loan_application_files'
