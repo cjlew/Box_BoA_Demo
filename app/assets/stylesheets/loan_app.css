@@ -1,0 +1,57 @@
+#loan-application-container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#buttons {
+  margin-top: 20px;
+}
+
+#upload-component {
+  background-color: #f9f7f4;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: .0625rem solid #d1c9c0;
+}
+#loan-application-step {
+  color: #012169;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: sans-serif;
+}
+/*Helvetica Neue",Helvetica,Roboto,Arial,sans-serif*/
+
+#box-upload {
+
+  margin: auto;
+  width: 50%;
+  height: 400px;
+  margin-bottom: 30px;
+  border: .0625rem solid #d1c9c0;
+}
+
+#footer{
+  width: 100%;
+  background-color:#ece6dd;
+  height: 100px;
+}
+
+#footer-text {
+  font-size: 15px;
+  margin: 50px 5px ;
+}

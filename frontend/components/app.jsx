@@ -1,5 +1,6 @@
 import React from 'react';
 import Uploader from './uploader.jsx';
+import StaticComponents from './static_components.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,7 +10,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="loan-application-container">
+      <div id="loan-application-container">
+        <StaticComponents />
         <Uploader />
       </div>
     );

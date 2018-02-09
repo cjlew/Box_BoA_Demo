@@ -1,7 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import { ContentUploader } from 'box-ui-elements';
+import { addLocaleData } from 'react-intl';
+import enLocaleData from 'react-intl/locale-data/en';
+import messages from 'box-ui-elements/i18n/en-US';
+import 'box-ui-elements/dist/uploader.css';
+import Footer from './footer.jsx';
 
+
+addLocaleData(enLocaleData);
 
 class Uploader extends React.Component {
   constructor(props) {
@@ -11,39 +19,23 @@ class Uploader extends React.Component {
     };
   }
 
-  uploadFiles() {
-    let fileToUpload = document.getElementById('file-upload-input').files[0];
-    let form = new FormData();
-
-    form.append('file', fileToUpload);
-    form.append('parent_id', '46276214925');
-    $.ajax({
-      url: 'https://upload.box.com/api/2.0/files/content',
-      headers: {Authorization: 'Bearer whAQZkMeYzFkgQ3w5NubPTmLhL1aUGJY'},
-      type: 'POST',
-      processData: false,
-      contentType: false,
-      dataType: 'json',
-      data: form
-    }).then((data) => {
-       console.log(data.responseText);
-    });
-
-  }
-
   render() {
     return(
         <div id='upload-component'>
-          <div id='box-upload'>
-            <label>Upload your Loan Application Files
-              <br/>
-              <input
-                     onChange={() => this.uploadFiles()}
-                     type='file'
-                     name='loan_application_files'
-                     id='file-upload-input'/>
-            </label>
-          </div>
+          <h2 id='loan-application-step'>Upload your Loan Application Files</h2>
+            <div id='box-upload'>
+
+                  <ContentUploader
+                      token='h7kWO9uAQGxuvQTb4plqtoQhJe2rUEjY'
+                      language='en-US'
+                      messages={messages}
+                      name='loan_application_files'
+                      rootFolderId='46276214925'
+                      id='file-upload-input'/>
+           </div>
+
+          <img id='buttons' src='../assets/buttons.png'></img>
+          <Footer />
         </div>
     );
   }
